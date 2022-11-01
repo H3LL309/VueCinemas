@@ -76,10 +76,31 @@
     background: var(--or-light);
     left: 50%;
     transform: translateX(-50%);
-    bottom: -43px;
+    bottom: -42px;
     transition: 0.3s;
 }
 
 .menu__link:hover.menu__link::after {
     width: 100%;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .nav__wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .menu__link::after {
+        bottom: +29px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .nav__menu {
+        gap: 15px;
+    }
 }
